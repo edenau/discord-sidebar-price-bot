@@ -1,0 +1,30 @@
+BTC:
+    priceUnit:
+        - USD
+    decimalPlace:
+        - 0
+    updateFreq: 60
+    discordBotKey: <Unique Discord Bot Key>
+    guildId: <Guild ID>
+
+ETH:
+    priceUnit:
+        - USD
+        - BTC
+    decimalPlace:
+        - 2
+        - 5
+    updateFreq: 60
+    discordBotKey: <Unique Discord Bot Key>
+    guildId: <Guild ID>
+
+YFI:
+    priceUnit:
+        - USD
+        - ETH
+    decimalPlace:
+        - 0
+        - 2
+    updateFreq: 120
+    discordBotKey: <Unique Discord Bot Key>
+    guildId: <Guild ID>

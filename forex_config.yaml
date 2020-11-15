@@ -1,0 +1,11 @@
+GBP/HKD:
+    decimalPlace: 2
+    updateFreq: 3600
+    discordBotKey: <Unique Discord Bot Key>
+    guildId: <Guild ID>
+
+USD/HKD:
+    decimalPlace: 3
+    updateFreq: 3600
+    discordBotKey: <Unique Discord Bot Key>
+    guildId: <Guild ID>
