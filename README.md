@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ### Cryptocurrency Price Bot
 1. Cache the cryptocurrency ticker list from Coincegko by generating a *crypto_cache.json* file.
 ```
-python cache_coingecko.py -v
+python crypto_cache.py -v
 ```
 
 2. Configure [crypto_config.yaml](crypto_config.yaml) using the template provided. 
