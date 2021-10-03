@@ -26,23 +26,6 @@ def get_gas_from_etherscan(key: str,
             print(r.status_code)
         time.sleep(10)
 
-def get_gas_from_gasnow(verbose: bool = False) -> Tuple[int]:
-    """
-    Fetch gas from Gasnow API
-    """
-    import requests
-    import time
-    r = requests.get('https://www.gasnow.org/api/v3/gas/price')
-    if r.status_code == 200:
-        if verbose:
-            print('200 OK')
-        data = r.json()['data']
-        return int(data['slow']//1e9), int(data['standard']//1e9), int(data['fast']//1e9)
-    else:
-        if verbose:
-            print(r.status_code)
-        time.sleep(10)
-
 def main(source, verbose=False):
     import yaml
     import discord
@@ -74,8 +57,6 @@ def main(source, verbose=False):
             if source == 'etherscan':
                 gweiList = get_gas_from_etherscan(config['etherscanKey'],
                                                   verbose=verbose)
-            elif source == 'gasnow':
-                gweiList = get_gas_from_gasnow(verbose=verbose)
             else:
                 raise NotImplemented('Unsupported source')
             # 4. Feed it to the bot
@@ -88,7 +69,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-s', '--source',
-                        choices=['etherscan', 'gasnow'],
+                        choices=['etherscan'],
                         default='etherscan',
                         help='select API')
 
