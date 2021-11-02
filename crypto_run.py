@@ -10,6 +10,8 @@ def get_currencySymbol(currTicker: str) -> str:
     """
     if currTicker.upper() == 'USD':
         return '$'
+    elif currTicker.upper() == "EUR":
+        return "€"
     elif currTicker.upper() == 'BTC':
         return '₿'
     elif currTicker.upper() == 'ETH':
